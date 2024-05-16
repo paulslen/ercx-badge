@@ -19,11 +19,12 @@ const TokenScore: React.FC<TokenScoreProps> = ({ tokenAddress, networkId }) => {
       setError(null);
       try {
         const url = `https://ercx.runtimeverification.com/api/v1/tokens/${networkId}/${tokenAddress}/report?fields=text%2Cjson%2Cevaluations`;
+        const apiKey = process.env.REACT_APP_API_KEY || '';
         const response = await fetch(url, {
           method: 'GET',
           headers: {
             'accept': 'application/json',
-            'X-API-KEY': process.env.REACT_APP_API_KEY // Ensure this key is stored securely and not exposed in production
+            'X-API-KEY': apiKey // Ensure this key is stored securely and not exposed in production
           }
         });
         if (!response.ok) throw new Error(`HTTP status ${response.status}`);
