@@ -23,7 +23,7 @@ const TokenScore: React.FC<TokenScoreProps> = ({ tokenAddress, networkId }) => {
           method: 'GET',
           headers: {
             'accept': 'application/json',
-            'X-API-KEY': '28527059-b735-4061-ab71-369634d657eb' // Ensure this key is stored securely and not exposed in production
+            'X-API-KEY': process.env.REACT_APP_API_KEY // Ensure this key is stored securely and not exposed in production
           }
         });
         if (!response.ok) throw new Error(`HTTP status ${response.status}`);
