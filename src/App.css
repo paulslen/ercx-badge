@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.badge {
+  background-image: url('./ercx-badge-score-red.png'); /* Adjust the path as needed */
+  color: white; /* White text color */
+  width: 250px; /* Exact width of the badge */
+  height: 100px; /* Exact height of the badge */
+  display: flex;
+  position: relative; /* Set the badge's positioning context */
+  font-weight: bold;
+  font-size: 24px; /* Adjust the font size as necessary */
+  text-align: center;
+  background-size: 100% 100%; /* Stretch the background image to cover the badge dimensions */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+.badge-text {
+  position: absolute; /* Position the text absolutely within the badge */
+  left: 86px; /* 80px from the left of the badge */
+  top: 46px; /* 50px from the top of the badge */
+}
+
+
